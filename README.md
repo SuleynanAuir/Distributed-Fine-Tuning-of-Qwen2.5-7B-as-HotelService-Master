@@ -1,4 +1,4 @@
-# 🏨 End-to-End Distributed Fine-Tuning of Qwen2.5-7B for Hotel Intelligence
+# 🏨 End-to-End Distributed Fine-Tuning of Qwen2.5-7B for Hotel Intelligence (SFT + LoRA + QLoRA + DPO)
 
 <p align="left">
   <img alt="Qwen2.5-7B" src="https://img.shields.io/badge/Qwen2.5-7B-4f46e5"/>
