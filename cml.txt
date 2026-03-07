@@ -1,0 +1,4 @@
+bash /root/autodl-tmp/fineTuningLab/qwen2/train.sh
+bash /root/autodl-tmp/fineTuningLab/qwen2/train_sft_lora_2gpu.sh
+bash train_sft_qlora_2gpu.sh
+bash /root/autodl-tmp/fineTuningLab/qwen2/train_dpo_2gpu.sh
