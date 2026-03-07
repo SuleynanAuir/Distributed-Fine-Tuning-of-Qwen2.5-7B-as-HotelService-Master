@@ -1,10 +1,4 @@
-# 🏨 Distributed Fine-Tuning of Qwen2.5-7B for Hotel Master
-
-<p align="center">
-  <img src="assets/Gemini_Generated_Image_d0k0ixd0k0ixd0k0.png" alt="项目封面" width="720"/>
-</p>
-
-> 面向 AI 工程师作品集展示：强调 **可复现**、**可观测**、**可扩展**。🚀
+# 🏨 End-to-End Distributed Fine-Tuning of Qwen2.5-7B for Hotel Intelligence
 
 <p align="left">
   <img alt="python" src="https://img.shields.io/badge/Python-3.10%2B-blue"/>
@@ -22,8 +16,12 @@
   <a href="#-5-项目目录导航可点击"><img src="https://img.shields.io/badge/🗂️_项目目录导航-快速定位-purple"/></a>
 </p>
 
-## 📌 目录（Clickable TOC）
+<p align="center">
+  <img src="assets/Gemini_Generated_Image_d0k0ixd0k0ixd0k0.png" alt="项目封面" width="720"/>
+</p>
 
+## 📌 目录（Clickable TOC）
+> 面向 AI 工程师作品集展示：强调 **可复现**、**可观测**、**可扩展**。🚀
 - [🎯 1. 项目简介](#-1-项目简介project-overview)
 - [⭐ 2. 项目特点](#-2-项目特点features)
 - [🏗️ 3. 技术架构](#-3-技术架构architecture)
