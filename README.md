@@ -1,4 +1,4 @@
-# 🏨✨ Distributed Fine-Tuning of Qwen2.5-7B for Hotel Master
+# 🏨 Distributed Fine-Tuning of Qwen2.5-7B for Hotel Master
 
 <p align="center">
   <img src="assets/Gemini_Generated_Image_d0k0ixd0k0ixd0k0.png" alt="项目封面" width="720"/>
