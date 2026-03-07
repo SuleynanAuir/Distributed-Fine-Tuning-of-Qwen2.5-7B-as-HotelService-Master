@@ -1,19 +1,13 @@
 # 🏨 End-to-End Distributed Fine-Tuning of Qwen2.5-7B for Hotel Intelligence
 
 <p align="left">
-  <img alt="python" src="https://img.shields.io/badge/Python-3.10%2B-blue"/>
-  <img alt="pytorch" src="https://img.shields.io/badge/PyTorch-2.1-orange"/>
+  <img alt="Qwen2.5-7B" src="https://img.shields.io/badge/Qwen2.5-7B-4f46e5"/>
+  <img alt="Fine-Tuning" src="https://img.shields.io/badge/Fine--Tuning-Enabled-brightgreen"/>
   <img alt="transformers" src="https://img.shields.io/badge/Transformers-4.40-yellow"/>
   <img alt="deepspeed" src="https://img.shields.io/badge/DeepSpeed-ZeRO2-green"/>
   <img alt="peft" src="https://img.shields.io/badge/PEFT-LoRA%20%2F%20QLoRA-purple"/>
   <img alt="trl" src="https://img.shields.io/badge/TRL-DPO-red"/>
   <img alt="tb" src="https://img.shields.io/badge/TensorBoard-enabled-black"/>
-</p>
-
-<p>
-  <a href="#-8-dpo-实验量化2-gpu"><img src="https://img.shields.io/badge/🧪_DPO_实验量化-点击查看-brightgreen"/></a>
-  <a href="#-13-dpo-全量日志总表原始指标整理"><img src="https://img.shields.io/badge/📊_DPO_总表-一键跳转-blue"/></a>
-  <a href="#-5-项目目录导航可点击"><img src="https://img.shields.io/badge/🗂️_项目目录导航-快速定位-purple"/></a>
 </p>
 
 <p align="center">
