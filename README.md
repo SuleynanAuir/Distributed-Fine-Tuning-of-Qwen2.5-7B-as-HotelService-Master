@@ -138,7 +138,7 @@ QLoRA 微调过程中，Loss 从初期的 **3.08** 快速下降至 **0.28–0.31
 
 #### 📊 2.2.1 Training SFT-QLoRA Table
 <p align="center">
-  <img src="assets/2gpuQLoRA/qlora1.png" alt="SFT-QLoRA Training Metrics 1" width="85%"/>
+  <img src="2gpuQLoRA/qlora1.png" alt="SFT-QLoRA Training Metrics 1" width="85%"/>
 </p>
 
 <p align="center">
@@ -148,7 +148,7 @@ QLoRA 微调过程中，Loss 从初期的 **3.08** 快速下降至 **0.28–0.31
 <br>
 
 <p align="center">
-  <img src="assets/2gpuLoRA/qlora2.png" alt="SFT-QLoRA Training Metrics 2" width="85%"/>
+  <img src="2gpuLoRA/qlora2.png" alt="SFT-QLoRA Training Metrics 2" width="85%"/>
 </p>
 
 <p align="center">
@@ -159,14 +159,14 @@ QLoRA 微调过程中，Loss 从初期的 **3.08** 快速下降至 **0.28–0.31
 
 > 在分布式 QLoRA 训练过程中，GPU 内存使用情况保持在合理范围内，未出现 OOM 错误，验证了训练配置的稳定性和资源利用效率。
 <p align="center">
-  <img src="assets/2gpuQLoRA/QLoRA_GPU.png" alt="2GPU memory usage" width="85%"/>
+  <img src="2gpuQLoRA/QLoRA_GPU.png" alt="2GPU memory usage" width="85%"/>
 </p>
 <p align="center">
 <em>Figure 3 · GPU (*2 RTX 4090) Usage during distributed QLoRA training with 2 GPUs.</em>
 </p>
 
 <p align="center">
-  <img src="assets/2gpuQLoRA/QLoRA_Memory.png" alt="2GPU memory usage" width="85%"/>
+  <img src="gpuQLoRA/QLoRA_Memory.png" alt="2GPU memory usage" width="85%"/>
 </p>
 
 <p align="center">
