@@ -72,7 +72,7 @@
 > SFT-LoRA/QLoRA + DPO 训练指标全览，包含训练阶段指标表格、TensorBoard 可视化截图、GPU 内存使用图等，全面展示模型训练过程中的关键性能指标和资源利用情况。> DPO
 
 
-### 1️⃣ 2.1 SFT-LoRA 训练指标（x2 RTX 4080 Super）
+### 1️⃣ 2.1 SFT-LoRA 训练指标（x2 RTX 4090）
 
 ### 2.1.1 SFT-LoRA 训练阶段
 | 阶段 | Epoch | Loss | Grad Norm | Reward Accuracy | Reward Margin |
@@ -115,9 +115,69 @@
 ✅ **Overall**, the fine-tuned **Qwen2.5-7B-Instruct** demonstrates **excellent performance in dialogue role prediction, slot extraction, and assistant response generation**.
 
 
+
+### 2️⃣ 2.2 SFT-QLoRA 训练指标（x2 RTX 4090）
+
+#### 2.2.1 SFT-QLoRA 训练阶段
+
+| 阶段 | Epoch | Loss | Grad Norm | Learning Rate | Reward Accuracy | Reward Margin |
+|------|-------|------|-----------|---------------|----------------|---------------|
+| 初期 | 0.02  | 3.0857 | 9.8008 | 1.6667e-05 | - | - |
+| 初期 | 0.04  | 1.5762 | 11.1454 | 3.3333e-05 | - | - |
+| 初期 | 0.06  | 0.6439 | 2.0823 | 5.0000e-05 | - | - |
+| 中期 | 0.28  | 0.2436 ⬇️ | 1.2468 | 9.8073e-05 | - | - |
+| 中期 | 0.56  | 0.2334 | 0.7813 | 8.6828e-05 | - | - |
+| 中期 | 0.84  | 0.3104 ⬇️ | - | - | - | - |
+| 后期 | 1.39  | 0.2959 ⬇️ | - | - | - | - |
+| 后期 | 1.67  | 0.2864 ⬇️ | - | - | - | - |
+| 后期 | 1.95  | 0.2847 ⬇️ | - | - | - | - |
+| 结束 | 2.0   | 0.3056 | - | - | - | - |
+
+**结论：**  
+QLoRA 微调过程中，Loss 从初期的 **3.08** 快速下降至 **0.28–0.31** 区间并保持稳定，Grad Norm 在大部分训练阶段可控，训练表现出 **收敛性良好且稳定**✅，在低显存（4-bit 量化）条件下成功完成 7B 模型微调。
+
+#### 📊 2.2.1 Training SFT-QLoRA Table
+<p align="center">
+  <img src="assets/2gpuQLoRA/qlora1.png" alt="SFT-QLoRA Training Metrics 1" width="85%"/>
+</p>
+
+<p align="center">
+<em>Figure 1 · Core SFT-QLoRA training metrics visualized in TensorBoard, including loss dynamics and optimization signals.</em>
+</p>
+
+<br>
+
+<p align="center">
+  <img src="assets/2gpuLoRA/qlora2.png" alt="SFT-QLoRA Training Metrics 2" width="85%"/>
+</p>
+
+<p align="center">
+<em>Figure 2 · Additional optimization indicators observed during the SFT-QLoRA training process.</em>
+</p>
+
+#### 2.3.3 🖥️ GPU Memory Usage (2× GPU Training)
+
+> 在分布式 QLoRA 训练过程中，GPU 内存使用情况保持在合理范围内，未出现 OOM 错误，验证了训练配置的稳定性和资源利用效率。
+<p align="center">
+  <img src="assets/2gpuQLoRA/QLoRA_GPU.png" alt="2GPU memory usage" width="85%"/>
+</p>
+<p align="center">
+<em>Figure 3 · GPU (*2 RTX 4090) Usage during distributed QLoRA training with 2 GPUs.</em>
+</p>
+
+<p align="center">
+  <img src="assets/2gpuQLoRA/QLoRA_Memory.png" alt="2GPU memory usage" width="85%"/>
+</p>
+
+<p align="center">
+<em>Figure 4 · GPU (*2 RTX 4090) memory utilization during distributed QLoRA training with 2 GPUs.</em>
+</p>
+
+
+
 ---
 
-### 2️⃣ 2.3 DPO 训练指标（x2 RTX 4080 Super）
+### 3️⃣ 2.3 DPO 训练指标（x2 RTX 4090）
 
 #### 📊 2.3.1 Training DPO Table
 
@@ -168,7 +228,7 @@ DPO 训练过程 **稳定收敛**，`Loss` 从 **0.69 → 0.23** 持续下降，
   <img src="assets/2gpuDPO/GPU.png" alt="2GPU memory usage" width="85%"/>
 </p>
 <p align="center">
-<em>Figure 3 · GPU (*2 RTX 4080 Super) Usage during distributed DPO training with 2 GPUs.</em>
+<em>Figure 3 · GPU (*2 RTX 4090) Usage during distributed DPO training with 2 GPUs.</em>
 </p>
 
 <p align="center">
@@ -176,7 +236,7 @@ DPO 训练过程 **稳定收敛**，`Loss` 从 **0.69 → 0.23** 持续下降，
 </p>
 
 <p align="center">
-<em>Figure 4 · GPU (*2 RTX 4080 Super) memory utilization during distributed DPO training with 2 GPUs.</em>
+<em>Figure 4 · GPU (*2 RTX 4090) memory utilization during distributed DPO training with 2 GPUs.</em>
 </p>
 
 
