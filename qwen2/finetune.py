@@ -56,7 +56,11 @@ def main():
     quantization_config = None
     model_kwargs = {
         "trust_remote_code": True,
+        "low_cpu_mem_usage": True,
     }
+    attn_impl = os.environ.get("ATTN_IMPLEMENTATION", "").strip()
+    if attn_impl:
+        model_kwargs["attn_implementation"] = attn_impl
     if use_qlora:
         quantization_config = BitsAndBytesConfig(
             load_in_4bit=True,
@@ -81,6 +85,9 @@ def main():
             model,
             use_gradient_checkpointing=training_args.gradient_checkpointing,
         )
+
+    if training_args.gradient_checkpointing and getattr(training_args, "gradient_checkpointing_kwargs", None) is None:
+        training_args.gradient_checkpointing_kwargs = {"use_reentrant": False}
 
     # 设置LoRA的配置
     lora_config = LoraConfig(

@@ -1,0 +1,22 @@
+{
+  "data_path": "../data/test.jsonl",
+  "model_path": "/root/autodl-tmp/Qwen2.5-7B-Instruct",
+  "ckpt_path": "/root/autodl-tmp/fineTuningLab/qwen2/output/hotel_qwen2-20260307-190000/checkpoint-2150",
+  "total_samples": 560,
+  "search_samples": 242,
+  "assistant_samples": 318,
+  "role_accuracy": 99.1071,
+  "slot_precision": 95.9612,
+  "slot_recall": 95.4984,
+  "slot_f1": 95.7293,
+  "slot_exact_match": 90.0826,
+  "bleu4": 44.5112,
+  "rouge_l_f1": 60.4017,
+  "scoring_standard": {
+    "role_accuracy": "预测角色(search/assistant)与标注一致率，越高越好",
+    "slot_f1": "仅对search样本，按槽位值集合计算F1，越高越好",
+    "slot_exact_match": "仅对search样本，参数字典完全一致率，越高越好",
+    "bleu4": "仅对assistant样本，字符级BLEU-4，越高越好",
+    "rouge_l_f1": "仅对assistant样本，字符级ROUGE-L F1，越高越好"
+  }
+}
