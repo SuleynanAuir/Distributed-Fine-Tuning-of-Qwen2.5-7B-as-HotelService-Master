@@ -148,7 +148,7 @@ QLoRA 微调过程中，Loss 从初期的 **3.08** 快速下降至 **0.28–0.31
 <br>
 
 <p align="center">
-  <img src="2gpuLoRA/qlora2.png" alt="SFT-QLoRA Training Metrics 2" width="85%"/>
+  <img src="2gpuQLoRA/qlora2.png" alt="SFT-QLoRA Training Metrics 2" width="85%"/>
 </p>
 
 <p align="center">
@@ -166,7 +166,7 @@ QLoRA 微调过程中，Loss 从初期的 **3.08** 快速下降至 **0.28–0.31
 </p>
 
 <p align="center">
-  <img src="gpuQLoRA/QLoRA_Memory.png" alt="2GPU memory usage" width="85%"/>
+  <img src="2gpuQLoRA/QLoRA_Memory.png" alt="2GPU memory usage" width="85%"/>
 </p>
 
 <p align="center">
